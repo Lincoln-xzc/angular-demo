@@ -1,0 +1,7 @@
+<div ng-show="showLoginForm">
+    <form ng-submit="runLogin()"></form>
+</div>
+<div ng-show="!showLoginForm()">
+    <form ng-submit="runRegister()"></form>
+</div>
+<div login-form on-login="sendLogin(user)" on-register="sendRegister(user)"></div>

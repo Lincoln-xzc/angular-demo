@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+    <thead>
+    <tr class="head-title">
+        <th class="col-xs-3"></th>
+        <th class="col-xs-3 text-center">P2P</th>
+        <th class="col-xs-3 text-center">余额宝</th>
+        <th class="col-xs-3 text-center">银行理财产品</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="info in infoList" ng-cloak>
+        <td class="text-right title-desc" ng-bind="info.title"></td>
+        <td class="text-center" ng-repeat="key in ['p2p','yeb','bank']">
+            <span ng-if="info[key]">
+                <span ng-if="info[key].length" ng-bind="info[key]"></span>
+                <span ng-if="!info[key].length" class="glyphicon glyphicon-ok"></span>
+            </span>
+            <span ng-if="!info[key]" class="glyphicon glyphicon-remove"></span>
+        </td>
+    </tr>
+    </tbody>
+</table>

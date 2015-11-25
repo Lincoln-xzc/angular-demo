@@ -1,0 +1,53 @@
+.fade-in {
+    transition: 2s linear all;
+    -webkit-transition: 2s linear all;
+    -moz-transition: 2s linear all;
+    -o-transition: 2s linear all;
+}
+.fade-in:hover {
+   -moz-animation: 2s firstAnimation;
+    animation: 2s firstAnimation;
+    -webkit-animation: 2s firstAnimation;
+}
+.fade-in .ng-enter {
+    -webkit-animation: 2s firstAnimation;
+    animation: 2s firstAnimatin;
+    -moz-animation: 2s firstAnimation;
+}
+.fade-in .ng-enter .ng-enter-active {
+    opacity: 1;
+}
+.fade-in .ng-enter-stagger {
+    -moz-transition-delay: 200ms;
+    -webkit-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+    -webkit-transition-duration: 0ms;
+    -moz-transition-duration: 0ms;
+    -o-transition-duration: 0ms;
+    transition-duration: 0ms;
+}
+@keyframes firstAnimation {
+  0% {
+      color: yellow;
+  }
+  100% {
+      color:black;
+  }
+}
+@-webkit-keyframes firstAnimation {
+    from {
+        color: yellow;
+    }
+    to {
+        color: black;
+    }
+}
+@-moz-keyframes firstAnimation {
+    from {
+        color: yellow;
+    }
+    to {
+        color: black;
+    }
+}
